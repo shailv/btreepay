@@ -10,7 +10,7 @@ myserver.use('/css', express.static(__dirname + '/css'));
 myserver.use('/js', express.static(__dirname + '/js'));
 
 var server = myserver.listen(9000, function () {
-	//wait for connection and see if it wants to get a token or checkout and proces it
+	//wait for connection and see if it wants to get a token or checkout and process it
 	console.log('listening...');	
 });
 
@@ -20,9 +20,9 @@ myserver.get('/', function (request, response) {
 
 var gateway = braintree.connect({
 	environment: braintree.Environment.Sandbox,
-	merchantId: "qz32xddjy9qp5z8s",
-	publicKey: "ggmyxhc8knsjyskk",
-	privateKey: "5b86d401b99792de2b074b61522ac582"
+	merchantId: "xxxxxxxxxxxxxxx",
+	publicKey: "xxxxxxxxxxxxxxx",
+	privateKey: "xxxxxxxxxxxxxxx"
 });
 
 myserver.get("/client_token", function (request, response) {
